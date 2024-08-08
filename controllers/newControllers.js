@@ -6,7 +6,7 @@ const dataFunctions = require('../models/data.js')
 
 function addFormData(req,res,next) {
     let messages=dataFunctions.getMessageData();
-    let messageID= messages.length - 1 ;
+    let messageID= messages.length ; // not the minus one because we measure the lenght before adding the new message
     messages.push({ text: req.body.message, user: req.body.author, added: new Date(), id: messageID });
 
 };
