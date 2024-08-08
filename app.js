@@ -12,7 +12,7 @@ const path = require("node:path");
 //loading new routes
 const newMessage = require('./routes/new');
 const index = require('./routes/index');
-
+const messageDetails = require('./routes/messageDetails');
 
 
 // app
@@ -38,6 +38,7 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use('/new',newMessage)
 app.use('/',index);
+app.use('/details',messageDetails)
 const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () => console.log(`My first Express app - listening on port ${PORT}!`));

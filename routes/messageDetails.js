@@ -1,10 +1,13 @@
 const express = require('express');
 const router = express.Router();
 
-// index controllers 
 
 
-router.get("/details", (req,res) => res.render("message-views/messageDetails.ejs");
+// messageDetailscontrollers 
+const detailsControllers=require('../controllers/messageDetailsControllers.js')
+
+
+router.get("/:id", detailsControllers.renderDetails);
   
 
 module.exports = router
