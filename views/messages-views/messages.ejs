@@ -1,0 +1,10 @@
+<div>
+    
+    <% for (let i = 0; i < messages.length; i++) { %>
+      <ul class="messageBox"> <b> New Message </b>
+        <li class="userText"> <%= messages[i].user %> </li>
+        <li class="messageText"> <%= messages[i].text %> </li>
+        <li class="DateText"> <%= messages[i].added %> </li>
+      </ul>
+    <% } %>
+</div>
