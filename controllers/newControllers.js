@@ -6,7 +6,8 @@ const dataFunctions = require('../models/data.js')
 
 function addFormData(req,res,next) {
     messages=dataFunctions.getMessageData();
-    messages.push({ text: req.body.message, user: req.body.author, added: new Date() });
+    messageID=message.lenght -1 ;
+    messages.push({ text: req.body.message, user: req.body.author, added: new Date(), id: messageID });
 
 };
 
