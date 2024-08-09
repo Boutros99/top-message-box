@@ -9,7 +9,7 @@ function renderDetails(req,res) {
     const message=messages.find((post) => post.id === messageID);
     
     if (message) {
-    res.render("messages-views/messageDetails", {  message });
+    res.render("messages-views/messageDetails", { title: 'message details' ,  message: message });
     } else {
         res.status(404).send('message not found')
     }
